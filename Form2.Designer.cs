@@ -1,7 +1,7 @@
 ﻿
 namespace Semana8_Grupo4
 {
-    partial class Form2
+    partial class fmenu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,17 @@ namespace Semana8_Grupo4
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // fmenu
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Name = "fmenu";
             this.Text = "Form2";
+            this.ResumeLayout(false);
+
         }
 
         #endregion

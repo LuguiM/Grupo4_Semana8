@@ -8,9 +8,9 @@ using System.Windows.Forms;
 
 namespace Semana8_Grupo4
 {
-    public partial class Form2 : Form
+    public partial class fmenu : Form
     {
-        public Form2()
+        public fmenu()
         {
             InitializeComponent();
         }
