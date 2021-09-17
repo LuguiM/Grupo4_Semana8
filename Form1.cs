@@ -28,7 +28,8 @@ namespace Semana8_Grupo4
             OleDbConnection conexion_access = newOleDbConnection();
             //Cadena de conexión para la base de datos
             //Se recomienda generar la cadena de conexion para evitar errores
-            conexion_access.ConnectionString = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\sistema.accdb;Persist Security Info=False;"; conexion_access.ConnectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\sistema\sistema.mdb;Persist Security Info=False;";
+            conexion_access.ConnectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\\Users\\orell\\OneDrive\\Escritorio\\sistemas.mdb"; 
+            //conexion_access.ConnectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\sistema\sistema.mdb;Persist Security Info=False;";
             //Abriendo conexion
             conexion_access.Open();
             //Consulta a tabla de usuarios en la base de datos
