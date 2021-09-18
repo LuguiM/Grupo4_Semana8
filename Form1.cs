@@ -26,11 +26,13 @@ namespace Semana8_Grupo4
         {
             //Creado la variable para la nueva conexion
 
-            OleDbConnection conexion_access = newOleDbConnection();
+            
+            OleDbConnection conexion_access = new OleDbConnection();
             //Cadena de conexión para la base de datos
             //Se recomienda generar la cadena de conexion para evitar errores
             conexion_access.ConnectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\\Users\\orell\\OneDrive\\Escritorio\\sistemas.mdb"; 
-            //conexion_access.ConnectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\sistema\sistema.mdb;Persist Security Info=False;";
+            //conexion_access.ConnectionString = @"Provider = Microsoft.Jet.OLEDB.4.0; Data Source = C:\sistema\sistema.mdb;
+            //Persist Security Info=False;";
             //Abriendo conexion
             conexion_access.Open();
             //Consulta a tabla de usuarios en la base de datos
@@ -44,16 +46,21 @@ namespace Semana8_Grupo4
                 if ((txtusuario.Text == registro["nombre"].ToString()) && (txtclave.Text == registro["clave"].ToString()))
                 {
                     //llamando formulario principal llamado menufmenu
-                    fm = new fmenu();
+                    fmenu fm = new fmenu();
                     fm.Show();
                     this.Hide();
                 }
             }
-          
+            conexion_access.Close();
         }
-                  
 
-           
+        
+
+        private OleDbDataAdapter newOleDbDataAdapter(string v, OleDbConnection conexion_access)
+        {
+            throw new NotImplementedException();
+        }
+
         
     }
 }
